@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==1.11"
+python-decouple = "*"
+whitenoise = "*"
+dj-database-url = "*"
+"psycopg2-binary" = "*"
+phonenumbers = "*"
+pycountry = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"

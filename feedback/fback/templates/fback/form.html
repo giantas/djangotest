@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Feedback Required{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <form action="" method="post" class="form-signin">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">Fill in appropriately</h2>
+
+        <label for="{{ form.contact.id_for_label }}" class="sr-only">
+            {{ form.contact.label }}
+        </label>
+        {{ form.contact }}
+
+        <label for="{{ form.neighbourhood.id_for_label }}" class="sr-only">
+            {{ form.neighbourhood.label }}
+        </label>
+        {{ form.neighbourhood }}
+
+        <label for="{{ form.ratings.id_for_label }}" class="sr-only">
+            {{ form.ratings.label }}
+        </label>
+        {{ form.ratings }}
+
+        <label for="{{ form.comments.id_for_label }}" class="sr-only">
+            {{ form.comments.label }}
+        </label>
+        {{ form.comments }}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        <span>or <strong>
+            <a href="{% url 'feedback:form' %}">refresh</a>
+        </strong></span>
+    </form>
+</div>
+
+{% endblock %}
